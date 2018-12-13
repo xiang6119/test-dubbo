@@ -7,18 +7,25 @@ package vc.thinker.dubbo.service;
  */
 public interface LockService {
 
+	
 	/**
-	 * 单个查询
+	 * 逐渐查询
+	 * @param id
+	 * @return
 	 */
 	String findOne(Long id);
 	
 	/**
 	 * 列表查询
+	 * @param type
+	 * @return
 	 */
 	String listByType(Integer type);
 	
 	/**
-	 * 删除一个
+	 * 主键删除
+	 * @param id
+	 * @return
 	 */
 	Boolean delete(Long id);
 }

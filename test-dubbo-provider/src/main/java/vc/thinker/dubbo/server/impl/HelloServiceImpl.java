@@ -6,9 +6,12 @@ import com.alibaba.dubbo.config.annotation.Service;
 
 import vc.thinker.dubbo.service.HelloService;
 
-
-@Service(timeout=5000)
-@Transactional
+/**
+ * @author ZhangGaoXiang
+ * @date   2018年12月13日 下午4:30:06
+ */
+@Service
+@Transactional(rollbackFor = Exception.class)
 public class HelloServiceImpl implements HelloService{
 
 	@Override

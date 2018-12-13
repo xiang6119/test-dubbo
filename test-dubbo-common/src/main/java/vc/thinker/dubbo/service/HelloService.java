@@ -7,5 +7,10 @@ package vc.thinker.dubbo.service;
  */
 public interface HelloService {
 
+	/**
+	 * 简单测试
+	 * @param name
+	 * @return
+	 */
 	String sayHello(String name);
 }
