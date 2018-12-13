@@ -9,6 +9,11 @@ import com.alibaba.dubbo.config.ConsumerConfig;
 import com.alibaba.dubbo.config.ProtocolConfig;
 import com.alibaba.dubbo.config.RegistryConfig;
 
+/**
+ * Dubbo 配置
+ * @author ZhangGaoXiang
+ * @date   2018年12月13日 下午4:27:58
+ */
 @Configuration
 public class DubboConfiguration {
 

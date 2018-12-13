@@ -8,6 +8,11 @@ import com.alibaba.dubbo.config.ProtocolConfig;
 import com.alibaba.dubbo.config.ProviderConfig;
 import com.alibaba.dubbo.config.RegistryConfig;
 
+/**
+ * 集成Dubbo配置
+ * @author ZhangGaoXiang
+ * @date   2018年12月13日 下午4:28:28
+ */
 @Configuration
 public class DubboConfiguration {
 
@@ -24,7 +29,6 @@ public class DubboConfiguration {
 	public ProviderConfig providerConfig() {
 		ProviderConfig  providerConfig = new ProviderConfig();
 		providerConfig.setTimeout(5000);
-//		providerConfig.setStatus("xxx,yyy");
 		return providerConfig;
 		
 	}

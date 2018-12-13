@@ -11,6 +11,11 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+/**
+ * api 配置
+ * @author ZhangGaoXiang
+ * @date   2018年12月13日 下午4:09:13
+ */
 @Configuration
 @EnableSwagger2
 public class ApiConfig {
