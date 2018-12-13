@@ -1,0 +1,14 @@
+SpringBoot 集成 Dubbo
+
+目录结构说明
+
+	test-dubbo-common
+		提供服务
+	test-dubbo-provider
+		提供服务的实现类
+	test-dubbo-api
+		调用服务
+
+
+
+
