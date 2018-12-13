@@ -29,7 +29,6 @@ public class HelloController {
 	@Reference(check=false,retries=2)
 	private HelloService helloService;
 	
-	
 	@RequestMapping(value = "demo1" , method = { RequestMethod.GET})
 	@ApiOperation(value="简单的测试",notes="简单的测试")
 	public String demo1() {
