@@ -20,7 +20,7 @@ import vc.thinker.dubbo.service.LockService;
 @Api(value = "锁相关 - Api", description = "锁相关 - Api")
 public class LockController {
 
-	@Reference(check=false)
+	@Reference(check=false, version="1.0")
 	private LockService lockService;
 	
 	@RequestMapping(value = "findOne", method = { RequestMethod.GET})
@@ -28,12 +28,4 @@ public class LockController {
 	public String findOne(Long id) {
 		return lockService.findOne(id);
 	}
-	
-	
-	@RequestMapping(value = "listByType", method = { RequestMethod.GET})
-	@ApiOperation(value="锁列表查询",notes="锁列表查询")
-	public String listByType(Integer type) {
-		return lockService.listByType(type);
-	}
-	
 }

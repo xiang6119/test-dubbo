@@ -20,14 +20,21 @@ public class DubboConfiguration {
 	@Value("${dubbo.app.name}")
 	private String applicationName;
 
-	@Value("${dubbo.zooker.url}")
+	@Value("${dubbo.zookeeper.url}")
 	private String zookeeperUrl;
 
 	@Bean
 	public ApplicationConfig applicationConfig() {
 		ApplicationConfig applicationConfig = new ApplicationConfig();
-		applicationConfig.setName("consumer-test");
+		applicationConfig.setName(applicationName);
 		return applicationConfig;
+	}
+	@Bean
+	public RegistryConfig registryConfig() {
+		RegistryConfig registryConfig = new RegistryConfig();
+		registryConfig.setAddress(zookeeperUrl);
+		registryConfig.setCheck(false);
+		return registryConfig;
 	}
 
 	@Bean
@@ -37,13 +44,6 @@ public class DubboConfiguration {
 		return consumerConfig;
 	}
 
-	@Bean
-	public RegistryConfig registryConfig() {
-		RegistryConfig registryConfig = new RegistryConfig();
-		registryConfig.setAddress("zookeeper://192.168.1.10:2181");
-		registryConfig.setClient("curator");
-		return registryConfig;
-	}
 	
 	@Bean
 	public ProtocolConfig protocolConfig() {

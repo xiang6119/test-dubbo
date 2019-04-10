@@ -1,0 +1,15 @@
+# server port
+server:
+  port: 8081
+
+# dubbo
+dubbo: 
+  app: 
+    name: api
+  zookeeper:
+    url: zookeeper://localhost:2181
+    
+#profiles
+spring:
+  profiles:
+        active: dev # prod
